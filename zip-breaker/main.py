@@ -1,5 +1,9 @@
+import breaker
+
+
 def main():
-    print("hello world")
+    breaker.crack("zip-breaker/test doc.zip")
+
 
 if __name__ == "__main__":
     main()
