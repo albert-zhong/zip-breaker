@@ -1,26 +1,11 @@
-def stack(current_list, dictionary):
-    new_list = current_list
-    for item in current_list.copy():
-        for entry in dictionary:
-            new_list.add(item + entry)
-    return new_list
-
-
-def show_all(dct, length):
-    final_list = set()
-    for char in dct:
-        final_list.add(char)
-
-    for x in range(1, length):
-        final_list = stack(final_list, dct)
-
-    return final_list
+def stack(current_set, chars):
+    new_set = set()
+    for item in current_set:
+        for char in chars:
+            new_set.add(item + char)
+    return new_set
 
 
 lst = {"a", "b", "c"}
 dct = "abc"
 
-my_list = show_all(dct, 4)
-
-for entry in my_list:
-    print(entry)
