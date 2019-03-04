@@ -1,0 +1,1 @@
+this is just here so github can realize there's a manual/ folder
