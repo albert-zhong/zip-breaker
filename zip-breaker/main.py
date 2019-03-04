@@ -7,7 +7,7 @@ def main():
     top1000 = "darkweb/darkweb2017-top1000.txt"
     top10000 = "darkweb/darkweb2017-top10000.txt"
 
-    print(breaker.crack("tests/p.zip", 1, 1, ascii_lowercase))
+    print(breaker.crack("tests/pass.zip", 1, 4, ascii_lowercase))
 
 
 if __name__ == "__main__":
