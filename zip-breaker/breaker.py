@@ -33,6 +33,7 @@ def crack(path, lower_length, upper_length, special_chars=None):
             try:
                 with ZipFile(path) as zf:
                     zf.extractall(pwd=bytes(password, "utf-8"))
+                    create_result(password, path)
                     return password
             except RuntimeError:
                 pass
@@ -46,10 +47,16 @@ def crack(path, lower_length, upper_length, special_chars=None):
     print("could not crack password")
 
 
+def create_result(password, path):
+    file = open("results/result_" + get_time(), "w")
+    file.write("password for " + path + " is\n")
+    file.write(password)
+
+
 def create_manual_passwords(manual_passwords):
     file = open("manual/manual_passwords_" + get_time(), "w")
     for manual_password in manual_passwords:
-        file.write(manual_password)
+        file.write(manual_password + "\n")
     file.close()
 
 
