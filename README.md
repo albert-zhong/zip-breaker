@@ -1,2 +1,2 @@
 # zip-breaker
-Python script to execute brute-force attacks on password protected zip files
+Python script to try different passwords on password-protected zip files
